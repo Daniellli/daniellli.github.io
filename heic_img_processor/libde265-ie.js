@@ -8130,16 +8130,43 @@ function copyTempDouble(ptr) {
           var url = Browser.URLObject.createObjectURL(b);
           var img = new Image();
           img.onload = function img_onload() {
-            assert(img.complete, 'Image ' + name + ' could not be decoded');
+            assert(img.complete, 'Image ' + name +' could not be decoded');
+          
+            // 获取页面宽度
+            var pageWidth = document.documentElement.clientWidth;
+          
+            // 计算图像应有的宽度为页面宽度的 40%
+            var targetWidth = pageWidth * 0.4;
+          
+            // 保持图像宽高比计算高度
+            var ratio = img.width / img.height;
+            var targetHeight = targetWidth / ratio;
+          
             var canvas = document.createElement('canvas');
-            canvas.width = img.width;
-            canvas.height = img.height;
+            canvas.width = targetWidth;
+            canvas.height = targetHeight;
+          
             var ctx = canvas.getContext('2d');
-            ctx.drawImage(img, 0, 0);
+            ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
             Module["preloadedImages"][name] = canvas;
             Browser.URLObject.revokeObjectURL(url);
             if (onload) onload(byteArray);
           };
+          
+          // img.onload = function img_onload() {
+          //   assert(img.complete, 'Image ' + name + ' could not be decoded');
+          //   var canvas = document.createElement('canvas');
+
+          //   canvas.width = img.width;
+          //   canvas.height = img.height;
+
+          //   var ctx = canvas.getContext('2d');
+          //   ctx.drawImage(img, 0, 0);
+          //   Module["preloadedImages"][name] = canvas;
+          //   Browser.URLObject.revokeObjectURL(url);
+          //   if (onload) onload(byteArray);
+          // };
+
           img.onerror = function img_onerror(event) {
             console.log('Image ' + url + ' could not be decoded');
             if (onerror) onerror();
