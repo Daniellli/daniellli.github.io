@@ -13,6 +13,7 @@
   <!-- Bootstrap -->
   <script src="js/video_comparison.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap-4.4.1.js"></script>
   <script src="js/app.js"></script>
 
@@ -137,7 +138,8 @@
       align-items: center;
       justify-content: center;
       position: absolute;
-      bottom: 10%;
+      /* Put indicators below the video instead of overlaying it */
+      bottom: 0;
       left: 90%;
 
       /* Adjust vertical position */
@@ -446,7 +448,7 @@
           <h1>In-the-wild performance</h1>
           <hr style="margin-top: 0px" />
 
-          <div id="comparisonCarousel" class="carousel slide" data-ride="carousel" style="position: relative;">
+          <div id="comparisonCarouselWild" class="carousel slide" data-ride="carousel" style="position: relative;">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="video-container">
@@ -479,42 +481,66 @@
                   </video>
                 </div>
               </div>
-<!--
+
               <div class="carousel-item">
                 <div class="video-container">
                   <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
-                    <source src="assets/videos/comparison/set7-scene6.mp4" type="video/mp4">
+                    <source src="assets/videos/in-the-wild/indoor-04.mp4" type="video/mp4">
                   </video>
                 </div>
-              </div> -->
+              </div>
+
+              <div class="carousel-item">
+                <div class="video-container">
+                  <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                    <source src="assets/videos/in-the-wild/indoor-05.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+
+              <div class="carousel-item">
+                <div class="video-container">
+                  <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                    <source src="assets/videos/in-the-wild/indoor-06.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
 
             </div>
 
-            <a class="carousel-control-prev" href="#comparisonCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#comparisonCarouselWild" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#comparisonCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#comparisonCarouselWild" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
 
             <ol class="carousel-indicators">
-              <li data-target="#comparisonCarousel" data-slide-to="0" class="active">
+              <li data-target="#comparisonCarouselWild" data-slide-to="0" class="active">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="1">
+              <li data-target="#comparisonCarouselWild" data-slide-to="1">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="2">
+              <li data-target="#comparisonCarouselWild" data-slide-to="2">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="3">
+              <li data-target="#comparisonCarouselWild" data-slide-to="3">
                 <span class="indicator-dot"></span>
               </li>
-              <!-- <li data-target="#comparisonCarousel" data-slide-to="4">
+              <li data-target="#comparisonCarouselWild" data-slide-to="4">
                 <span class="indicator-dot"></span>
-              </li> -->
+              </li>
+              <li data-target="#comparisonCarouselWild" data-slide-to="5">
+                <span class="indicator-dot"></span>
+              </li>
+              <li data-target="#comparisonCarouselWild" data-slide-to="6">
+                <span class="indicator-dot"></span>
+              </li>
             </ol>
           </div>
 
@@ -525,6 +551,290 @@
 
   <br><br>
 
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Dynamic</h1>
+          <hr style="margin-top: 0px" />
+
+          <div id="comparisonCarouselDynamic" class="carousel slide" data-ride="carousel" style="position: relative;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="video-container">
+                  <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                    <source src="assets/videos/dynamic/dynamic-01.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="video-container">
+                  <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                    <source src="assets/videos/dynamic/dynamic-02.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div> 
+
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#comparisonCarouselDynamic" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#comparisonCarouselDynamic" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+            <ol class="carousel-indicators">
+              <li data-target="#comparisonCarouselDynamic" data-slide-to="0" class="active">
+                <span class="indicator-dot"></span>
+              </li>
+              <li data-target="#comparisonCarouselDynamic" data-slide-to="1">
+                <span class="indicator-dot"></span>
+              </li>
+              
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Robotic</h1>
+          <hr style="margin-top: 0px" />
+
+          <div id="comparisonCarouselRobotics" class="carousel slide" data-ride="carousel" style="position: relative;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="video-container">
+                  <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                    <source src="assets/videos/robot.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+     
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#comparisonCarouselRobotics" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#comparisonCarouselRobotics" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+            <ol class="carousel-indicators">
+              <li data-target="#comparisonCarouselDynamic" data-slide-to="0" class="active">
+                <span class="indicator-dot"></span>
+              </li>
+              
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+
+
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Fabric</h1>
+          <hr style="margin-top: 0px" />
+
+          <div id="comparisonCarouselFabric" class="carousel slide" data-ride="carousel" style="position: relative;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="video-container">
+                  <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                    <source src="assets/videos/fabric.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+     
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#comparisonCarouselFabric" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#comparisonCarouselFabric" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+            <ol class="carousel-indicators">
+              <li data-target="#comparisonCarouselFabric" data-slide-to="0" class="active">
+                <span class="indicator-dot"></span>
+              </li>
+              
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+  
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Small Objects</h1>
+          <hr style="margin-top: 0px" />
+
+          <div id="comparisonCarouselSmallObjects" class="carousel slide" data-ride="carousel" style="position: relative;">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="video-container">
+                    <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                      <source src="assets/videos/small-object/small-object-01.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item">
+                  <div class="video-container">
+                    <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                      <source src="assets/videos/small-object/small-object-02.mp4" type="video/mp4">
+                      
+                    </video>
+                  </div>
+                </div> 
+  
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#comparisonCarouselSmallObjects" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#comparisonCarouselSmallObjects" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+            <ol class="carousel-indicators">
+
+              <li data-target="#comparisonCarouselSmallObjects" data-slide-to="0" class="active">
+                <span class="indicator-dot"></span>
+              </li>
+              
+              <li data-target="#comparisonCarouselSmallObjects" data-slide-to="1">
+                <span class="indicator-dot"></span>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+  
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>In-the-wild Video Normal Estimation</h1>
+          <hr style="margin-top: 0px" />
+
+          <div id="comparisonCarouselInTheWildNormal" class="carousel slide" data-ride="carousel" style="position: relative;">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="video-container">
+                    <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                      <source src="assets/videos/in-the-wild-normal/in-the-wild-normal-01.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item">
+                  <div class="video-container">
+                    <video class="video" style="width: 98%; max-width:1200px" autoplay controls muted loop>
+                      <source src="assets/videos/in-the-wild-normal/in-the-wild-normal-02.mp4" type="video/mp4">
+                      
+                    </video>
+                  </div>
+                </div> 
+  
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#comparisonCarouselInTheWildNormal" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#comparisonCarouselInTheWildNormal" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+            <ol class="carousel-indicators">
+
+              <li data-target="#comparisonCarouselInTheWildNormal" data-slide-to="0" class="active">
+                <span class="indicator-dot"></span>
+              </li>
+              
+              <li data-target="#comparisonCarouselInTheWildNormal" data-slide-to="1">
+                <span class="indicator-dot"></span>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+  
 
   <!-- <section>
     <div class="container">
@@ -547,65 +857,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1>Abstract</h1>
-          <hr style="margin-top: 0px" />
-          <img src="assets/imgs/teaser.jpg" width="100%" />
-          <p style="text-align: justify; text-justify: inter-word;">
-            Recent advances in illumination control extend image-based methods to video, yet still facing a trade-off between lighting fidelity and temporal consistency.
-            Moving beyond relighting, a key step toward generative modeling of real-world scenes is the joint control of camera trajectory and illumination, since visual dynamics are inherently shaped by both geometry and lighting.
-            To this end, we present <b>Light-X</b>, a video generation framework that enables controllable rendering from monocular videos with both viewpoint and illumination control.
-            <b>1)</b> We propose a disentangled design that decouples geometry and lighting signals: geometry and motion are captured via dynamic point clouds projected along user-defined camera trajectories, while illumination cues are provided by a relit frame consistently projected into the same geometry.
-            These explicit, fine-grained cues enable effective disentanglement and guide high-quality illumination.
-            <b>2)</b> To address the lack of paired multi-view and multi-illumination videos, we introduce <b>Light-Syn</b>, a degradation-based pipeline with inverse-mapping that synthesizes training pairs from in-the-wild monocular footage.
-            This strategy yields a dataset covering static, dynamic, and AI-generated scenes, ensuring robust training.
-            Extensive experiments show that <b>Light-X</b> outperforms baseline methods in joint camera-illumination control. 
-            Besides, our model surpasses prior video relighting methods in text- and background-conditioned settings. Ablation studies further validate the effectiveness of the disentangled formulation and degradation pipeline.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br><br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>Method</h1>
-        </div>
-        <div class="col-12">
-          <hr style="margin-top: 0px" />
-          <img src="assets/imgs/pipeline.jpg" width="100%" />
-          <p style="text-align: left; text-justify: inter-word;">
-            Overview of <b>Light-X</b>.
-            Given an input video \( \mathbf{V}^s \), we first relight one frame with IC-Light,
-            conditioned on a lighting text prompt, to obtain a sparse relit video
-            \( \hat{\mathbf{V}}^s \).
-            We then estimate depths to construct a dynamic point cloud
-            \( \mathcal{P} \) from \( \mathbf{V}^s \) and a relit point cloud
-            \( \hat{\mathcal{P}} \) from \( \hat{\mathbf{V}}^s \).
-            Both point clouds are projected along a user-specified camera trajectory,
-            producing geometry-aligned renders and masks
-            \( (\mathbf{V}^p, \mathbf{V}^m) \) and \( (\hat{\mathbf{V}}^p, \hat{\mathbf{V}}^m) \).
-            These six cues, together with illumination tokens extracted via a Q-Former,
-            are fed into DiT blocks for conditional denoising.
-            Finally, a VAE decoder reconstructs a high-fidelity video
-            \( \mathbf{V}^t \) faithful to the target trajectory and illumination.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br><br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>Comparisons with SOTA Methods for Video Depth Estimation</h1>
+          <h1>Comparisons for Video Depth Estimation</h1>
           <hr style="margin-top: 0px" />
 
-          <div id="comparisonCarousel" class="carousel slide" data-ride="carousel" style="position: relative;">
+          <div id="comparisonCarouselDepth" class="carousel slide" data-ride="carousel" style="position: relative;">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="video-container">
@@ -649,29 +904,29 @@
 
             </div>
 
-            <a class="carousel-control-prev" href="#comparisonCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#comparisonCarouselDepth" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#comparisonCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#comparisonCarouselDepth" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
 
             <ol class="carousel-indicators">
-              <li data-target="#comparisonCarousel" data-slide-to="0" class="active">
+              <li data-target="#comparisonCarouselDepth" data-slide-to="0" class="active">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="1">
+              <li data-target="#comparisonCarouselDepth" data-slide-to="1">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="2">
+              <li data-target="#comparisonCarouselDepth" data-slide-to="2">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="3">
+              <li data-target="#comparisonCarouselDepth" data-slide-to="3">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="4">
+              <li data-target="#comparisonCarouselDepth" data-slide-to="4">
                 <span class="indicator-dot"></span>
               </li>
             </ol>
@@ -682,6 +937,8 @@
     </div>
   </section>
 
+  <br><br>
+
   
 
 
@@ -689,10 +946,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1>Comparisons with SOTA Methods for Video Depth Estimation</h1>
+          <h1>Comparisons for Video Normal Estimation</h1>
           <hr style="margin-top: 0px" />
 
-          <div id="comparisonCarousel" class="carousel slide" data-ride="carousel" style="position: relative;">
+          <div id="comparisonCarouselNormal" class="carousel slide" data-ride="carousel" style="position: relative;">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="video-container">
@@ -714,24 +971,23 @@
 
             </div>
 
-            <a class="carousel-control-prev" href="#comparisonCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#comparisonCarouselNormal" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#comparisonCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#comparisonCarouselNormal" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
 
             <ol class="carousel-indicators">
-              <li data-target="#comparisonCarousel" data-slide-to="0" class="active">
+              <li data-target="#comparisonCarouselNormal" data-slide-to="0" class="active">
                 <span class="indicator-dot"></span>
               </li>
-              <li data-target="#comparisonCarousel" data-slide-to="1">
+              <li data-target="#comparisonCarouselNormal" data-slide-to="1">
                 <span class="indicator-dot"></span>
               </li>
               
-              </li>
             </ol>
           </div>
 
@@ -740,8 +996,110 @@
     </div>
   </section>
 
-  
-  
+  <br><br>
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Abstract</h1>
+          <hr style="margin-top: 0px" />
+          <!-- <img src="assets/imgs/teaser.jpg" width="100%" /> -->
+          <img src="assets/imgs/rendering_pipe.png" width="70%" />
+          <img src="assets/imgs/main.png" width="100%" />
+          <p style="text-align: justify; text-justify: inter-word;">
+            Transparent objects remain notoriously hard for perception systems: refraction, reflection and transmission break the assumptions behind stereo, 
+            ToF and purely discriminative monocular depth, causing holes and temporally unstable estimates. 
+            Our key observation is that modern video diffusion models already synthesize convincing transparent phenomena, suggesting they have internalized the optical rules. 
+            We build TransPhy3D, a synthetic video corpus of transparent/reflective scenes: 11k sequences (1.32M frames) rendered with Blender/Cycles. 
+            Scenes are assembled from a curated bank of category-rich static assets and shape-rich procedural assets paired with glass/plastic/metal materials. 
+            We render RGB + depth + normals with physically based ray tracing and OptiX denoising. 
+            Starting from a large video diffusion model, we learn a video-to-video translator for depth (and normals) via lightweight LoRA adapters. 
+            During training we concatenate RGB and (noisy) depth latents in the DiT backbone and co-train on TransPhy3D and existing frame-wise synthetic datasets, 
+            yielding temporally consistent predictions for arbitrary-length input videos. 
+            The resulting model, DKT, achieves zero-shot SOTA on real and synthetic video benchmarks involving transparency: ClearPose, DREDS (CatKnown/CatNovel), and TransPhy3D-Test. 
+            It improves accuracy and temporal consistency over strong image/video baselines (e.g., Depth-Anything-v2, DepthCrafter), 
+            and a normal variant (DKT-Normal) sets the best video normal estimation results on ClearPose. 
+            A compact 1.3B version runs at ~0.17 s/frame (832×480). 
+            Integrated into a grasping stack, DKT’s depth boosts success rates across translucent, reflective and diffuse surfaces, outperforming prior estimators. 
+            Together, these results support a broader claim: “Diffusion knows transparency.” 
+            Generative video priors can be repurposed, efficiently and label-free, into robust, temporally coherent perception for challenging real-world manipulation. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+<!-- 
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Method</h1>
+        </div>
+        <div class="col-12">
+          <hr style="margin-top: 0px" />
+          <img src="assets/imgs/rendering_pipe.png" width="100%" />
+          <p style="text-align: left; text-justify: inter-word;">
+            Overview of <b>DKT's Rendering Pipeline</b>.
+
+            The asset library contains category-rich static assets collected from off-the-shelf asset websites, as well as shape-rich parametric assets generated using deformable superquadrics.
+            In our rendering pipeline, we randomly select \( M \) assets and drop them from top to bottom into a predefined scene using Blender's integrated physics engine, producing diverse arrangements and collisions.
+            Subsequently, we sample a circular camera trajectory around the inserted assets and render RGB, depth, and normal videos using the Cycles engine.
+            
+          </p>
+        </div>
+
+        <div class="col-12">
+          <hr style="margin-top: 0px" />
+          <img src="assets/imgs/main.png" width="100%" />
+          <p style="text-align: left; text-justify: inter-word;">
+            Overview of <b>DKT</b>.
+            A constant value \( F \), which denotes the sequence length within a batch, is first sampled and then used to construct a batch of training data. When \( F = 1 \), the batch is constructed from both image and video datasets; otherwise, the batch is constructed solely from video datasets. Subsequently, the RGB and depth videos are encoded into a latent space. 
+            The RGB latents are concatenated channel-wise with the noised depth latents and processed by several DiT blocks for conditional denoising. 
+            We adopt flow matching as the training strategy, and the entire pipeline is trained using a LoRA-based fine-tuning approach.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <br><br> -->
+
+<!-- 
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Method</h1>
+        </div>
+        <div class="col-12">
+          <hr style="margin-top: 0px" />
+          <img src="assets/imgs/main.png" width="100%" />
+          <p style="text-align: left; text-justify: inter-word;">
+            Overview of <b>DKT</b>.
+            Given an input video \( \mathbf{V}^s \), we first relight one frame with IC-Light,
+            conditioned on a lighting text prompt, to obtain a sparse relit video
+            \( \hat{\mathbf{V}}^s \).
+            We then estimate depths to construct a dynamic point cloud
+            \( \mathcal{P} \) from \( \mathbf{V}^s \) and a relit point cloud
+            \( \hat{\mathcal{P}} \) from \( \hat{\mathbf{V}}^s \).
+            Both point clouds are projected along a user-specified camera trajectory,
+            producing geometry-aligned renders and masks
+            \( (\mathbf{V}^p, \mathbf{V}^m) \) and \( (\hat{\mathbf{V}}^p, \hat{\mathbf{V}}^m) \).
+            These six cues, together with illumination tokens extracted via a Q-Former,
+            are fed into DiT blocks for conditional denoising.
+            Finally, a VAE decoder reconstructs a high-fidelity video
+            \( \mathbf{V}^t \) faithful to the target trajectory and illumination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br> -->
+
   
 
   <!-- citing -->
